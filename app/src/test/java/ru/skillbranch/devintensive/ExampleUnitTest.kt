@@ -1,16 +1,16 @@
-package ru.skillbranch.dev_intensive
+package ru.skillbranch.devintensive
 
 import org.junit.*
 import org.junit.Assert.*
-import ru.skillbranch.dev_intensive.extensions.TimeUnits
-import ru.skillbranch.dev_intensive.extensions.TimeUnits.MINUTE
-import ru.skillbranch.dev_intensive.extensions.add
-import ru.skillbranch.dev_intensive.extensions.format
-import ru.skillbranch.dev_intensive.extensions.toUserView
-import ru.skillbranch.dev_intensive.extensions.truncate
-import ru.skillbranch.dev_intensive.models.BaseMessage
-import ru.skillbranch.dev_intensive.models.Chat
-import ru.skillbranch.dev_intensive.models.User
+import ru.skillbranch.devintensive.extensions.TimeUnits
+import ru.skillbranch.devintensive.extensions.TimeUnits.MINUTE
+import ru.skillbranch.devintensive.extensions.add
+import ru.skillbranch.devintensive.extensions.format
+import ru.skillbranch.devintensive.extensions.toUserView
+import ru.skillbranch.devintensive.extensions.truncate
+import ru.skillbranch.devintensive.models.BaseMessage
+import ru.skillbranch.devintensive.models.Chat
+import ru.skillbranch.devintensive.models.User
 import java.util.Date
 
 /**
