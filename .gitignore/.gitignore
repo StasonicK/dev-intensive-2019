@@ -1,36 +1,53 @@
-#built application files
-*.apk
-*.ap_
-
-# files for the dex VM
-*.dex
-
-# Java class files
+# Built application files
+# Compiled class file
 *.class
+*.aab
 
-# generated files
-bin/
-gen/
+# Log file
+# Files for the ART/Dalvik VM
+*.dex
+# Local configuration file (sdk path, etc)
+local.properties
+
+# External native build folder generated in Android Studio 2.2 and later
+.externalNativeBuild
+
+# Gradle files
+.gradle/
+
+# Signing files
+.signing/
+
+# User-specific configurations
+*.iml
 
 # Local configuration file (sdk path, etc)
 local.properties
 
-# Windows thumbnail db
-Thumbs.db
+# Log Files
+*.log
 
-# OSX files
-.DS_Store
+# Gradle files
+.gradle/
 
-# Android Studio
-*.iml
-.idea
-#.idea/workspace.xml - remove # and delete .idea if it better suit your needs.
-.gradle
-build/
-.navigation
+# Android Studio captures folder
 captures/
-output.json 
 
-#NDK
-obj/
-.externalNativeBuild
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Version control
+vcs.xml
+
+# Version control
+vcs.xml
+lint/generated/
+lint/outputs/
+lint/tmp/
+lint/reports/
