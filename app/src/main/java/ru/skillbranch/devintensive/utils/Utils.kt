@@ -11,38 +11,13 @@ object Utils {
     }
 
     fun transliteration(payload: String, divider: String = " "): String {
-        val names: List<String> = payload.split(divider)
+        val names = payload.split(" ")
         var finalName: StringBuilder = StringBuilder()
         for (name in names) {
             var translitName: StringBuilder = StringBuilder("")
-            for (letter in name.toCharArray())
-                when (letter.toLowerCase()) {
-//                    'a' -> translitName.append('а')
-//                    'b' -> translitName.append('б')
-//                    'c' -> translitName.append('с')
-//                    'd' -> translitName.append('д')
-//                    'e' -> translitName.append('е')
-//                    'f' -> translitName.append('ф')
-//                    'g' -> translitName.append('г')
-//                    'h' -> translitName.append('х')
-//                    'i' -> translitName.append('и')
-//                    'j' -> translitName.append('д').append('ж')
-//                    'k' -> translitName.append('к')
-//                    'l' -> translitName.append('л')
-//                    'm' -> translitName.append('м')
-//                    'n' -> translitName.append('н')
-//                    'o' -> translitName.append('о')
-//                    'p' -> translitName.append('п')
-//                    'q' -> translitName.append('к')
-//                    'r' -> translitName.append('р')
-//                    's' -> translitName.append('с')
-//                    't' -> translitName.append('т')
-//                    'u' -> translitName.append('у')
-//                    'v' -> translitName.append('в')
-//                    'w' -> translitName.append('в')
-//                    'x' -> translitName.append('к').append('с')
-//                    'y' -> translitName.append('у').append('а').append('й')
-//                    'z' -> translitName.append('з')
+            for (letter in name.toCharArray()) {
+                val small_letter = letter.toLowerCase()
+                when (small_letter) {
                     'а' -> translitName.append('a')
                     'б' -> translitName.append('b')
                     'в' -> translitName.append('v')
@@ -65,23 +40,25 @@ object Utils {
                     'т' -> translitName.append('t')
                     'у' -> translitName.append('u')
                     'ф' -> translitName.append('f')
-                    'х' -> translitName.append('k').append('h')
+                    'х' -> translitName.append('h')
                     'ц' -> translitName.append('c')
                     'ч' -> translitName.append('c').append('h')
                     'ш' -> translitName.append('s').append('h')
-                    'щ' -> translitName.append('s').append('c')
-                    'ъ' -> translitName.append("i").append("e")
-                    'ы' -> translitName.append('y')
+                    'ш' -> translitName.append('s').append('h').append("'")
+                    'ъ' -> translitName.append("")
+                    'ы' -> translitName.append('i')
                     'ь' -> translitName.append("")
                     'э' -> translitName.append('e')
-                    'ю' -> translitName.append('i').append('u')
-                    'я' -> translitName.append('i').append('a')
+                    'ю' -> translitName.append('y').append('u')
+                    'я' -> translitName.append('y').append('a')
+                    else -> translitName.append(small_letter)
                 }
+            }
             translitName[0] = translitName[0].toUpperCase()
             if (finalName.isEmpty()) {
                 finalName.append(translitName)
             } else {
-                finalName.append("_").append(translitName)
+                finalName.append(divider).append(translitName)
             }
         }
         return finalName.toString()
