@@ -1,53 +1,36 @@
 # Built application files
-# Compiled class file
-*.class
-*.aab
+/*/build/
 
-# Log file
-# Files for the ART/Dalvik VM
-*.dex
+# Crashlytics configuations
+com_crashlytics_export_strings.xml
+
 # Local configuration file (sdk path, etc)
 local.properties
 
-# External native build folder generated in Android Studio 2.2 and later
-.externalNativeBuild
-
-# Gradle files
+# Gradle generated files
 .gradle/
+build/
+gradle/
+gradlew
+gradle.properties
+gradlew.bat
+
+app/libs
+app/src/test/
+app/src/androidTest/
 
 # Signing files
 .signing/
 
 # User-specific configurations
+.idea/
 *.iml
 
-# Local configuration file (sdk path, etc)
-local.properties
-
-# Log Files
-*.log
-
-# Gradle files
-.gradle/
-
-# Android Studio captures folder
-captures/
-
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
-
-# Version control
-vcs.xml
-
-# Version control
-vcs.xml
-lint/generated/
-lint/outputs/
-lint/tmp/
-lint/reports/
+# OS-specific files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
