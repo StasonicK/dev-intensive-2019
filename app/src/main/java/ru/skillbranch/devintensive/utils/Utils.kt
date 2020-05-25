@@ -2,10 +2,12 @@ package ru.skillbranch.devintensive.utils
 
 object Utils {
     fun parseFullName(fullName: String?): Pair<String?, String?> {
-        val parts: List<String>? = fullName?.split(" ")
+        val parts: MutableList<String>? = fullName?.split(" ")?.toMutableList()
 
-        val firstName = parts?.getOrNull(0)
-        val lastName = parts?.getOrNull(1)
+        val first = parts?.getOrNull(0)?.trim()
+        val firstName = if (first?.contains("")!!) null else first
+        val last = parts?.getOrNull(1)?.trim()
+        val lastName = if (last?.contains("")!!) null else last
 
         return firstName to lastName
     }
