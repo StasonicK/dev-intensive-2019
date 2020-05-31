@@ -6,7 +6,7 @@ object Utils {
 
         val first = parts?.getOrNull(0)?.trim()
         val firstName = if (first?.contains("")!!) null else first
-        val last = parts?.getOrNull(1)?.trim()
+        val last = parts.getOrNull(1)?.trim()
         val lastName = if (last?.contains("")!!) null else last
 
         return firstName to lastName
@@ -19,7 +19,7 @@ object Utils {
             var translitName: StringBuilder = StringBuilder("")
             for (letter in name.toCharArray()) {
                 val small_letter = letter.toLowerCase()
-                when (small_letter) {
+                when(small_letter) {
                     'а' -> translitName.append('a')
                     'б' -> translitName.append('b')
                     'в' -> translitName.append('v')

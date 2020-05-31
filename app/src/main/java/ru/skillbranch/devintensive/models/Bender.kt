@@ -3,6 +3,7 @@ package ru.skillbranch.devintensive.models
 import ru.skillbranch.devintensive.models.Bender.Question.IDLE
 import ru.skillbranch.devintensive.models.Bender.Question.NAME
 import ru.skillbranch.devintensive.models.Bender.Status.CRITICAL
+import java.util.Locale
 
 class Bender(var status: Status = Status.NORMAL, var question: Question = Question.NAME) {
 
@@ -16,7 +17,7 @@ class Bender(var status: Status = Status.NORMAL, var question: Question = Questi
     }
 
     fun listenAnswer(answer: String): Pair<String, Triple<Int, Int, Int>> {
-        return if (question.answers.contains(answer.toLowerCase())) {
+        return if (question.answers.contains(answer.toLowerCase(Locale.ROOT))) {
             if (question == IDLE) {
                 "Отлично - ты справился\nНа этом все, вопросов больше нет" to status.color
             } else {
